@@ -18,12 +18,12 @@
         <canvas id="screen" width="10" height="10"></canvas>
 
         <script type="module">
-            import createKeyboardListner from "./keyboard-listener.js";
+            import createKeyboardListener from "./keyboard-listener.js";
             import createGame from "./game.js";
             import renderScreen from "./render-screen.js";
 
             const game = createGame();
-            const keyboardListener = createKeyboardListner();
+            const keyboardListener = createKeyboardListener();
 
             const socket = io();
 

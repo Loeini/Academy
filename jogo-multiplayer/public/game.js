@@ -8,21 +8,21 @@ export default function createGame() {
         },
     };
 
-    const obsevers = [];
+    const observers = [];
 
     function start() {
-        const frequency = 3000;
+        const frequency = 2000;
 
         setInterval(addFruit, frequency);
     }
 
-    function subscribe(observeFunction) {
-        obsevers.push(observeFunction);
+    function subscribe(observerFunction) {
+        observers.push(observerFunction);
     }
 
     function notifyAll(command) {
-        for (const observeFunction of obsevers) {
-            observeFunction(command);
+        for (const observerFunction of observers) {
+            observerFunction(command);
         }
     }
 

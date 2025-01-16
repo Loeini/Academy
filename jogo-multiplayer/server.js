@@ -1,11 +1,11 @@
 import express from "express";
 import http from "http";
 import createGame from "./public/game.js";
-import { Server } from "socket.io";
+import pkg from "socket.io";
 
 const app = express();
 const server = http.createServer(app);
-const sockets = new Server(server);
+const sockets = new pkg(server);
 
 app.use(express.static("public"));
 
