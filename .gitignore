@@ -1,0 +1,18 @@
+# Node.js
+node_modules/
+
+# Diretórios de build
+dist/
+
+# Arquivos de configuração do editor (Exemplo: Vim, IDEs)
+*.swp
+.vscode/
+
+# Arquivos de ambiente
+.env
+
+# Arquivos temporários
+*.log
+
+# Caso você tenha arquivos de testes específicos que não precisam ser versionados
+test/
