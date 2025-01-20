@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  # Nossa API
+  api:
+    build: . # Usa o Dockerfile na pasta atual
+    ports:
+      - '3000:3000' # Mapeia porta 3000 do container para seu computador
+    volumes:
+      - .:/app # Sincroniza arquivos entre seu computador e o container
+      - /app/node_modules # Volume especial para node_modules
+    environment: # Variáveis de ambiente
+      - DATABASE_HOST=db # Nome do serviço do banco de dados
+      - DATABASE_PORT=5432
+      - DATABASE_USER=postgres
+      - DATABASE_PASSWORD=postgres
+      - DATABASE_NAME=docker_exercise
+    depends_on: # Indica que precisa do banco de dados
+      - db
+
+  # Banco de Dados
+  db:
+    image: postgres:13 # Usa imagem oficial do PostgreSQL
+    ports:
+      - '5432:5432'
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=docker_exercise
+    volumes:
+      - postgres_data:/var/lib/postgresql/data # Guarda dados do banco
+
+# Define volumes que serão criados
+volumes:
+  postgres_data:
