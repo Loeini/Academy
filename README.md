@@ -4,7 +4,12 @@
 
 JavaScript + Socket.io + Node.js
 Criado usando como base a seguinte playlist:
-https://youtube.com/playlist?list=PLMdYygf53DP5SVQQrkKCVWDS0TwYLVitL&si=myLkz_5Qu3UNkAaN
+[Meu primeiro jogo multiplayer](<[https://expo.io/](https://youtube.com/playlist?list=PLMdYygf53DP5SVQQrkKCVWDS0TwYLVitL&si=myLkz_5Qu3UNkAaN)>)
+
+```bash
+# Rodar o projeto
+npm start
+```
 
 ## Docker
 
